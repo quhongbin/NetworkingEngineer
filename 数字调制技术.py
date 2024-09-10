@@ -18,11 +18,18 @@ fig=plt.figure(figsize=([16,8]))
 plt.plot(x_values,y,label=r"$sin(x)$")
 #####  3sin(x) #####
 plt.plot(x_values,y*3,label=r"$3sin(x)$ 振幅")
-##### sin(x+pi/2) #####
+##### sin(x-pi/2) #####
 y_phase=np.sin(x-(np.pi/2))
 plt.plot(x_values,y_phase,label=r"$\sin(x+\frac{\pi}{2})$ 相位")
 #####   sin(1/2*x)  #####
-plt.plot(1/2*x_values,y,label=r"$\sin(\frac{1}{2}x)$ 频率")
+x_values_frequent=np.arange(0,900.1,1)
+y_frequent=np.sin(x_values_frequent*(np.pi/180))
+plt.plot(1/2*x_values_frequent,y_frequent,label=r"$\sin(\frac{1}{2}x)$ 频率")
+
+#####   3sin(1/2x+pi/2)   #####
+# x_values_zhonghe=np.arange(0,1080.1,1)
+# y_zhonghe=np.sin(x_values_zhonghe*(np.pi/180)-np.pi/2)
+# plt.plot(1/2*x_values_zhonghe,3*y_zhonghe,label=r"$3\sin(\frac{1}{2}x+\frac{\pi}{2})$")
 
 #设置网格
 plt.grid(which='major',linestyle="-",alpha=0.9)
