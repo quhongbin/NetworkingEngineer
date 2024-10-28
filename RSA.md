@@ -36,6 +36,9 @@ a=qb+r \qquad a \bmod b =r \\
 $
 
 # 扩展的欧几里得算法
+$设存在整数a,b,令d=\gcd(a,b),则存在s,t\in Z,使as+bt=1 \\
+d=\gcd(a,b)\Leftrightarrow as+bt=1$,该公式求逆元有用,另外该公式的证明[斐蜀定理](https://oi-wiki.org/math/number-theory/bezouts/)
+
 ### 最大公约数表示定理
 $若d=\gcd(a,b)\qquad a,b\in Z,存在s,t\in Z使得\\
 as+bt=d$
@@ -51,6 +54,14 @@ $设a,b中最小的公倍数为m,记作m=lcm(a,b)\quad 若a|c\ ,\ b|c\ 则\ m|c$
     此时m为最小公倍数$ 
 
 # 同余
+$
+设n为正整数,整数a和b模n的余数相同时,则称他们为\underline{同余关系},如果n|(a-b),就称a和b在模n下同余,记作a\equiv b (mond\ n)
+$
+例:
+$
+9 \equiv 3(mod\ 2)
+$
+
 
 # 乘法逆元
 $
@@ -61,5 +72,28 @@ $
 \therefore 7 \times 3 \bmod 5 =1   \\
 此处可理解为3和2在模5模式下为倒数 \\
 $
-> 定义：设$a \in \Zeta,n \in N,若az \equiv 1 ( \bmod n ), 称z为模n下a的乘法逆元 \\
-az \equiv1 ( \bmod n )\Rightarrow az \bmod n = 1$
+
+$
+定义：设a \in \Zeta,n \in N,若az \equiv 1 ( \bmod n ), 称z为模n下a的乘法逆元 记作a^{-1}=z,
+az \equiv1 ( \bmod n )\Rightarrow az \bmod n = 1
+$
+#### 注意
+1. $a在模n下的乘法逆元a^{-1}唯一的$
+2. $乘法逆元的存在条件,\gcd(a,n)=1\Leftrightarrow 模n下\ a有乘法逆元$
+# 一次同余方程
+$
+\quad 11x\equiv 4(mod\ 3) \\
+\Rightarrow x\equiv 4*11^{-1} mod\ 3 \\
+\Rightarrow x\equiv 4*2 mod\ 3 \\
+\Rightarrow x\equiv 8 mod\ 3 \\
+\Rightarrow x\equiv 2 mod\ 3 \\
+\Rightarrow x\equiv 8 mod\ 3 \\
+\Rightarrow x\equiv 2 mod\ 3 \\
+\Rightarrow x=3q+2,q\in Z
+$
+
+RSA算法
+1. $选取两个素数p和q,n=p\times q,m=(p-1)\times(q-1)$
+2. 选取公钥e,私钥d
+3. $e*d=1(\bmod m)\Rightarrow \frac{e*d}{m}=y \cdots 1(y\in Z)\Rightarrow e*d=y*m+1\Rightarrow e*d-y*m=1,求e的逆元d\\类似的扩展欧几里得算法as+bt=1$
+$同样的a,b(e,y)是已知的$
