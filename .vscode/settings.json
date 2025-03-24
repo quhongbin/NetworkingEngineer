@@ -1,0 +1,26 @@
+{    
+    "vim.vimrc.enable": false,
+    "vim.vimrc.path": "C:\\Users\\28187\\Desktop\\NetworkingEngineer\\.vimrc",
+    "terminal.integrated.shell.windows": "F:\\PortableGit\\bin\\bash.exe",
+    "files.autoSave": "onFocusChange",   
+    "terminal.integrated.shellIntegration.enabled": true,
+    "synthwave84.brightness": 0.5,
+    "vscode_custom_css.imports": ["file:///$HOME/Desktop/MyProject/mathematic/synthwave84.css"],
+    "vscode_custom_css.statusbar": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": [
+        "#8FBCBB",
+        "#434C5E"
+    ],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#87CEFA",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
+    "vim.useSystemClipboard": true,
+}
